@@ -1,0 +1,11 @@
+export async function fetchWeather(location) {
+    if (location.trim() !== "") {
+        try {
+            const response = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?key=FACV4SB4UY2QJTKA3CTBP7CP5`);
+            const responseJson = await response.json();
+            return responseJson;
+        } catch (error) {
+            console.log(error);
+        }
+    }
+}
