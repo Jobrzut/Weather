@@ -1,3 +1,3 @@
-import { fetchWeather } from "./components/getWeather";
+import { getWeather } from "./components/getWeather";
 
-console.log(await fetchWeather("London"));
+console.log(await getWeather("Kanfanar"));
