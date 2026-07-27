@@ -15,8 +15,8 @@ export function displayHome(searchLocation) {
 <div class="flex flex-col gap-6">
 <input type="checkbox" id="toggle" class="toggleCheckbox hidden">
 <label for="toggle" class="toggleContainer relative grid grid-cols-2 w-fit border-3 rounded-2xl bg-espresso text-butter pointer before:content[''] before:absolute before:w-1/2 before:h-full before:left-0 before:rounded-xl before:bg-butter before:transition-all before:duration-300 ">
-<div class="p-1 text-center z-1">Metric</div>
-<div class="p-1 text-center z-1">Stupid</div>
+<div class="p-1.5 text-center z-1">Metric</div>
+<div class="p-1.5 text-center z-1">Stupid</div>
 </label>
 <h1 class="text-butter font-bold text-2xl">Check it before you go there...</h1>
 <div class="flex gap-4">
@@ -33,5 +33,6 @@ export function displayHome(searchLocation) {
 
   takeInput(unitSwitcher, locationInput, searchButton, searchLocation);
 
+  body.innerHTML="";
   body.appendChild(homepage)
 }
