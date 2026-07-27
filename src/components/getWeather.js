@@ -8,8 +8,7 @@ async function fetchWeather(location,unit = "metric") {
             const responseJson = await response.json();
             return responseJson;
         } catch (error) {
-            console.log(error);
-            return null;
+            throw new Error(error)
         }
 }
 
