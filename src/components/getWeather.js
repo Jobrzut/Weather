@@ -41,9 +41,9 @@ function scoopWeatherData(data) {
     return weatherData
 }
 
-export async function getWeather(location) {
+export async function getWeather(location, unit) {
     if (location.trim() !== "") {
-        const data = await fetchWeather(location);
+        const data = await fetchWeather(location, unit);
         return scoopWeatherData(data);
     }
     throw new Error("No location provided!");

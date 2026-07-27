@@ -9,3 +9,25 @@
 
     --font-inter: "Inter", sans-serif;
 }
+
+.toggleCheckbox:checked + .toggleContainer::before {
+    left: 50%;
+ }
+
+ .toggleCheckbox:checked + .toggleContainer div:first-child{
+    color: var(--color-butter);
+    transition: color 0.3s;
+ }
+ .toggleCheckbox:checked + .toggleContainer div:last-child{
+    color: var(--color-espresso);
+    transition: color 0.3s;
+ }
+ .toggleCheckbox + .toggleContainer div:first-child{
+    color: var(--color-espresso);
+    transition: color 0.3s;
+ }
+ .toggleCheckbox + .toggleContainer div:last-child{
+    color: var(--color-butter);
+    transition: color 0.3s;
+ }
+ 

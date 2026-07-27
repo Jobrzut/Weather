@@ -1,12 +1,13 @@
 import './style.css'; 
 
 import { getWeather } from "./components/getWeather.js";
-import homepage from "./components/home.js";
+import { displayHome } from "./components/home.js";
 
-function displayScreen(page) {
-    const body = document.querySelector("body");
-    body.innerHTML = "";
-    body.appendChild(page);
+
+async function searchLocation(location,unit) {
+    let weatherData = await getWeather(location,unit)
+    console.log(weatherData)
 }
 
-displayScreen(homepage);
+displayHome(searchLocation)
+
