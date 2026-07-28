@@ -19,19 +19,16 @@ function scoopWeatherData(data) {
     }
     let weatherData = {};
     weatherData["alerts"] = data.alerts;
+    weatherData["timezone"] = data.timezone;
     for (let i=0;i<7;i++) {
         const source = data.days[i];
         weatherData[i] = {
             temp: source.temp,
-            tempmax: source.tempmax,
-            tempmin: source.tempmin,
             humidity: source.humidity,
             windspeed: source.windspeed,
-            windgust: source.windgust,
             conditions: source.conditions,
             icon: source.icon,
             uvindex: source.uvindex,
-            moonphase: source.moonphase,
             sunrise: source.sunrise,
             sunset: source.sunset,
             visibility: source.visibility,
