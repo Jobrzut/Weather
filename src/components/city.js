@@ -60,7 +60,7 @@ export function displayCity(cityName, unit, weatherData,searchLocation) {
     }
 
     citypage.innerHTML = `
-    <div class ="text-butter flex flex-col grow">
+    <div class ="text-butter flex flex-col grow gap-4">
         <button class="cursor-pointer self-start" id="backButton">← Back</button>
         <div class="flex justify-between items-center grow">
             <div class="flex flex-col gap-8">
@@ -79,7 +79,7 @@ export function displayCity(cityName, unit, weatherData,searchLocation) {
         <div class="flex flex-col gap-4">
             <div class="bg-butter rounded text-espresso px-8 py-6 flex flex-col gap-6">
                 <p class="uppercase font-bold text-xl">7-day forecast</p>
-                <div class="flex justify-between">
+                <div class="flex justify-between flex-wrap gap-3">
                     <div class="font-bold">${weatherData[0].temp}${systemSign["temp"]}</div>
                     <div>${weatherData[1].temp}${systemSign["temp"]}</div>
                     <div>${weatherData[2].temp}${systemSign["temp"]}</div>
